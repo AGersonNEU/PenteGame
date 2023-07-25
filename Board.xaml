@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:PenteGame"
         mc:Ignorable="d"
         Title="Board" Height="700" Width="700">
-    <Grid>
+    
+    <Grid ShowGridLines="True" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -58,7 +59,13 @@
             <RowDefinition/>
 
         </Grid.RowDefinitions>
-        <Label Grid.Row="1" Grid.Column="7" Grid.ColumnSpan="7" Grid.RowSpan="2" HorizontalContentAlignment="Center" Name="lblPlayerTurn" Content="It is Player One's Turn"></Label>
+        <Border Grid.Column="0" BorderBrush="White" BorderThickness="1">
+        </Border>
+        <Border Grid.Column="1" BorderBrush="White" BorderThickness="1">
+        </Border>
+        <Border Grid.Column="2" BorderBrush="White" BorderThickness="1">
+        </Border>
+        <Label Grid.Column="6" Grid.ColumnSpan="8" Grid.RowSpan="2" HorizontalContentAlignment="Center" Name="lblPlayerTurn" Content="It is Player One's Turn" Margin="16,0,13,1" Grid.Row="1"/>
 
         <Image Source="./Resources/BlackPiece_lg.png" Height="23" Width="28" HorizontalAlignment="Center" Grid.Column="15" Margin="0,3,0,3"/>
         <Label Grid.Column="15" Grid.Row="1" HorizontalContentAlignment="Center">x0</Label>
@@ -66,48 +73,48 @@
         <Image Source="./Resources/WhitePiece_lg.png" Height="23" Width="28" HorizontalAlignment="Center" Grid.Column="17" Margin="0,3,0,3"/>
         <Label Grid.Column="17" Grid.Row="1" HorizontalContentAlignment="Center">x0</Label>
 
-        <Label Grid.Row="3" HorizontalAlignment="Center">19</Label>
-        <Label Grid.Row="4" HorizontalAlignment="Center">18</Label>
-        <Label Grid.Row="5" HorizontalAlignment="Center">17</Label>
-        <Label Grid.Row="6" HorizontalAlignment="Center">16</Label>
-        <Label Grid.Row="7" HorizontalAlignment="Center">15</Label>
-        <Label Grid.Row="8" HorizontalAlignment="Center">14</Label>
-        <Label Grid.Row="9" HorizontalAlignment="Center">13</Label>
-        <Label Grid.Row="10" HorizontalAlignment="Center">12</Label>
-        <Label Grid.Row="11" HorizontalAlignment="Center">11</Label>
-        <Label Grid.Row="12" HorizontalAlignment="Center">10</Label>
-        <Label Grid.Row="13" HorizontalAlignment="Center">9</Label>
-        <Label Grid.Row="14" HorizontalAlignment="Center">8</Label>
-        <Label Grid.Row="15" HorizontalAlignment="Center">7</Label>
-        <Label Grid.Row="16" HorizontalAlignment="Center">6</Label>
-        <Label Grid.Row="17" HorizontalAlignment="Center">5</Label>
-        <Label Grid.Row="18" HorizontalAlignment="Center">4</Label>
-        <Label Grid.Row="19" HorizontalAlignment="Center">3</Label>
-        <Label Grid.Row="20" HorizontalAlignment="Center">2</Label>
-        <Label Grid.Row="21" HorizontalAlignment="Center">1</Label>
+        <Label Grid.Row="2" HorizontalAlignment="Left" Margin="-3,10,0,18" Grid.RowSpan="2">19</Label>
+        <Label Grid.Row="3" HorizontalAlignment="Left" Margin="-3,10,0,19" Grid.RowSpan="2">18</Label>
+        <Label Grid.Row="4" HorizontalAlignment="Left" Margin="-3,10,0,18" Grid.RowSpan="2">17</Label>
+        <Label Grid.Row="5" HorizontalAlignment="Left" Margin="-3,10,0,19" Grid.RowSpan="2">16</Label>
+        <Label Grid.Row="6" HorizontalAlignment="Left" Margin="-3,10,0,18" Grid.RowSpan="2">15</Label>
+        <Label Grid.Row="7" HorizontalAlignment="Left" Margin="-3,10,0,19" Grid.RowSpan="2">14</Label>
+        <Label Grid.Row="8" HorizontalAlignment="Left" Margin="-3,10,0,18" Grid.RowSpan="2">13</Label>
+        <Label Grid.Row="9" HorizontalAlignment="Left" Margin="-3,10,0,19" Grid.RowSpan="2">12</Label>
+        <Label Grid.Row="10" HorizontalAlignment="Left" Margin="-3,10,0,18" Grid.RowSpan="2">11</Label>
+        <Label Grid.Row="11" HorizontalAlignment="Left" Margin="-3,10,0,19" Grid.RowSpan="2">10</Label>
+        <Label Grid.Row="12" HorizontalAlignment="Left" Margin="0,10,0,18" Grid.RowSpan="2">9</Label>
+        <Label Grid.Row="13" HorizontalAlignment="Left" Margin="0,10,0,19" Grid.RowSpan="2">8</Label>
+        <Label Grid.Row="14" HorizontalAlignment="Left" Margin="0,10,0,18" Grid.RowSpan="2">7</Label>
+        <Label Grid.Row="15" HorizontalAlignment="Left" Margin="0,10,0,19" Grid.RowSpan="2">6</Label>
+        <Label Grid.Row="16" HorizontalAlignment="Left" Margin="0,10,0,18" Grid.RowSpan="2">5</Label>
+        <Label Grid.Row="17" HorizontalAlignment="Left" Margin="0,10,0,19" Grid.RowSpan="2">4</Label>
+        <Label Grid.Row="18" HorizontalAlignment="Left" Margin="0,10,0,18" Grid.RowSpan="2">3</Label>
+        <Label Grid.Row="19" HorizontalAlignment="Left" Margin="0,10,0,19" Grid.RowSpan="2">2</Label>
+        <Label Grid.Row="20" HorizontalAlignment="Left" Margin="0,10,0,18" Grid.RowSpan="2">1</Label>
 
-        <Label Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">A</Label>
-        <Label Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">B</Label>
-        <Label Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center">C</Label>
-        <Label Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center">D</Label>
-        <Label Grid.Row="2" Grid.Column="5" HorizontalAlignment="Center">E</Label>
-        <Label Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center">F</Label>
-        <Label Grid.Row="2" Grid.Column="7" HorizontalAlignment="Center">G</Label>
-        <Label Grid.Row="2" Grid.Column="8" HorizontalAlignment="Center">H</Label>
-        <Label Grid.Row="2" Grid.Column="9" HorizontalAlignment="Center">I</Label>
-        <Label Grid.Row="2" Grid.Column="10" HorizontalAlignment="Center">J</Label>
-        <Label Grid.Row="2" Grid.Column="11" HorizontalAlignment="Center">K</Label>
-        <Label Grid.Row="2" Grid.Column="12" HorizontalAlignment="Center">L</Label>
-        <Label Grid.Row="2" Grid.Column="13" HorizontalAlignment="Center">M</Label>
-        <Label Grid.Row="2" Grid.Column="14" HorizontalAlignment="Center">N</Label>
-        <Label Grid.Row="2" Grid.Column="15" HorizontalAlignment="Center">O</Label>
-        <Label Grid.Row="2" Grid.Column="16" HorizontalAlignment="Center">P</Label>
-        <Label Grid.Row="2" Grid.Column="17" HorizontalAlignment="Center">Q</Label>
-        <Label Grid.Row="2" Grid.Column="18" HorizontalAlignment="Center">R</Label>
-        <Label Grid.Row="2" Grid.Column="19" HorizontalAlignment="Center">S</Label>
-        <Canvas Grid.Row="2" Grid.ColumnSpan="21" Grid.RowSpan="20" Background="BlanchedAlmond" Margin="33,28,33,0"/>
+        <Label Grid.Row="1" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="20,28,0,1" Grid.RowSpan="2" Width="18">A</Label>
+        <Label Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="21,28,0,1" Grid.RowSpan="2" Width="17">B</Label>
+        <Label Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="20,28,0,1" Grid.RowSpan="2" Width="18">C</Label>
+        <Label Grid.Row="1" Grid.Column="3" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="21,28,0,1" Grid.RowSpan="2" Width="19">D</Label>
+        <Label Grid.Row="1" Grid.Column="4" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="24,28,0,1" Grid.RowSpan="2" Width="17">E</Label>
+        <Label Grid.Row="1" Grid.Column="5" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="23,28,0,1" Grid.RowSpan="2" Width="17">F</Label>
+        <Label Grid.Row="1" Grid.Column="6" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="23,28,0,1" Grid.RowSpan="2" Width="19">G</Label>
+        <Label Grid.Row="1" Grid.Column="7" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="25,28,0,1" Grid.RowSpan="2" Width="19">H</Label>
+        <Label Grid.Row="1" Grid.Column="8" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="28,28,0,1" Grid.RowSpan="2" Width="13">I</Label>
+        <Label Grid.Row="1" Grid.Column="9" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="28,28,0,1" Grid.RowSpan="2" Width="14">J</Label>
+        <Label Grid.Row="1" Grid.Column="10" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="28,28,0,1" Grid.RowSpan="2" Width="17">K</Label>
+        <Label Grid.Row="1" Grid.Column="11" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="28,28,0,1" Grid.RowSpan="2" Width="16">L</Label>
+        <Label Grid.Row="1" Grid.Column="12" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="27,28,0,1" Grid.RowSpan="2" Width="21">M</Label>
+        <Label Grid.Row="1" Grid.Column="13" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="29,28,0,1" Grid.RowSpan="2" Width="19">N</Label>
+        <Label Grid.Row="1" Grid.Column="14" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="29,28,0,1" Grid.RowSpan="2" Width="19">O</Label>
+        <Label Grid.Row="1" Grid.Column="15" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="31,28,0,1" Grid.RowSpan="2" Width="17">P</Label>
+        <Label Grid.Row="1" Grid.Column="16" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="31,28,0,1" Grid.RowSpan="2" Width="20">Q</Label>
+        <Label Grid.Row="1" Grid.Column="17" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="32,28,0,1" Grid.RowSpan="2" Width="18">R</Label>
+        <Label Grid.Row="1" Grid.Column="18" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="33,28,0,1" Grid.RowSpan="2" Width="17">S</Label>
+        <Canvas Grid.Row="2" Grid.ColumnSpan="20" Grid.RowSpan="20" Background="BlanchedAlmond" Margin="33,28,30,28"/>
 
         <Button Grid.ColumnSpan="6" Grid.Row="22" Grid.Column="9" Click="MainMenu" Margin="0,5,33,28" Grid.RowSpan="2">Main Menu</Button>
-        
+
     </Grid>
 </Window>
