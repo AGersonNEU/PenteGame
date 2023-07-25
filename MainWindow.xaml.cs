@@ -22,14 +22,28 @@ namespace PenteGame
     {
         public MainWindow()
         {
+   
             InitializeComponent();
         }
 
         private void OpenBoard(object sender, RoutedEventArgs e)
         {
-            this.Hide();
-            Board board = new Board();
-            board.Show();
+
+
+            if (txtplayerOneName.Text.ToString() == null || txtplayerOneName.Text.ToString() == "" || txtplayerTwoName.Text.ToString() == null || txtplayerTwoName.Text.ToString() == "")
+            {
+                txtWarning.Content = "Please fill in all fields";
+            }
+            else
+            {
+
+                GlobalVariables.playerOne = new Player(txtplayerOneName.Text);
+                GlobalVariables.playerTwo = new Player(txtplayerTwoName.Text);
+
+                this.Hide();
+                Board board = new Board();
+                board.Show();
+            }
         }
     }
 }

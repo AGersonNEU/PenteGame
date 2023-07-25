@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PenteGame
 {
-    public class GlobalVariables
+    public class Player
     {
-        public static Player playerOne;
-        public static Player playerTwo;
-        
+        public String Name { get; set; }
+
+        public Player(String name)
+        {
+            this.Name = name;
+        }
     }
 }
