@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PenteGame"
         mc:Ignorable="d"
-        Title="Board" Height="450" Width="700">
+        Title="Board" Height="700" Width="700">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -19,7 +19,6 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
-            <ColumnDefinition/>            
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -29,7 +28,8 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
-           
+            <ColumnDefinition/>
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -38,15 +38,6 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>            
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>            
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -56,14 +47,67 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-           
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+
         </Grid.RowDefinitions>
         <Label Grid.Row="1" Grid.Column="7" Grid.ColumnSpan="7" Grid.RowSpan="2" HorizontalContentAlignment="Center" Name="lblPlayerTurn" Content="It is Player One's Turn"></Label>
-        
-        <Canvas Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="19" Grid.RowSpan="19" Background="BlanchedAlmond">
-            
-        </Canvas>
 
-        <Button Grid.ColumnSpan="2" Grid.Row="22" Grid.Column="9" Click="MainMenu">Main Menu</Button>
+        <Image Source="./Resources/BlackPiece_lg.png" Height="23" Width="28" HorizontalAlignment="Center" Grid.Column="15" Margin="0,3,0,3"/>
+        <Label Grid.Column="15" Grid.Row="1" HorizontalContentAlignment="Center">x0</Label>
+
+        <Image Source="./Resources/WhitePiece_lg.png" Height="23" Width="28" HorizontalAlignment="Center" Grid.Column="17" Margin="0,3,0,3"/>
+        <Label Grid.Column="17" Grid.Row="1" HorizontalContentAlignment="Center">x0</Label>
+
+        <Label Grid.Row="3" HorizontalAlignment="Center">19</Label>
+        <Label Grid.Row="4" HorizontalAlignment="Center">18</Label>
+        <Label Grid.Row="5" HorizontalAlignment="Center">17</Label>
+        <Label Grid.Row="6" HorizontalAlignment="Center">16</Label>
+        <Label Grid.Row="7" HorizontalAlignment="Center">15</Label>
+        <Label Grid.Row="8" HorizontalAlignment="Center">14</Label>
+        <Label Grid.Row="9" HorizontalAlignment="Center">13</Label>
+        <Label Grid.Row="10" HorizontalAlignment="Center">12</Label>
+        <Label Grid.Row="11" HorizontalAlignment="Center">11</Label>
+        <Label Grid.Row="12" HorizontalAlignment="Center">10</Label>
+        <Label Grid.Row="13" HorizontalAlignment="Center">9</Label>
+        <Label Grid.Row="14" HorizontalAlignment="Center">8</Label>
+        <Label Grid.Row="15" HorizontalAlignment="Center">7</Label>
+        <Label Grid.Row="16" HorizontalAlignment="Center">6</Label>
+        <Label Grid.Row="17" HorizontalAlignment="Center">5</Label>
+        <Label Grid.Row="18" HorizontalAlignment="Center">4</Label>
+        <Label Grid.Row="19" HorizontalAlignment="Center">3</Label>
+        <Label Grid.Row="20" HorizontalAlignment="Center">2</Label>
+        <Label Grid.Row="21" HorizontalAlignment="Center">1</Label>
+
+        <Label Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">A</Label>
+        <Label Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center">B</Label>
+        <Label Grid.Row="2" Grid.Column="3" HorizontalAlignment="Center">C</Label>
+        <Label Grid.Row="2" Grid.Column="4" HorizontalAlignment="Center">D</Label>
+        <Label Grid.Row="2" Grid.Column="5" HorizontalAlignment="Center">E</Label>
+        <Label Grid.Row="2" Grid.Column="6" HorizontalAlignment="Center">F</Label>
+        <Label Grid.Row="2" Grid.Column="7" HorizontalAlignment="Center">G</Label>
+        <Label Grid.Row="2" Grid.Column="8" HorizontalAlignment="Center">H</Label>
+        <Label Grid.Row="2" Grid.Column="9" HorizontalAlignment="Center">I</Label>
+        <Label Grid.Row="2" Grid.Column="10" HorizontalAlignment="Center">J</Label>
+        <Label Grid.Row="2" Grid.Column="11" HorizontalAlignment="Center">K</Label>
+        <Label Grid.Row="2" Grid.Column="12" HorizontalAlignment="Center">L</Label>
+        <Label Grid.Row="2" Grid.Column="13" HorizontalAlignment="Center">M</Label>
+        <Label Grid.Row="2" Grid.Column="14" HorizontalAlignment="Center">N</Label>
+        <Label Grid.Row="2" Grid.Column="15" HorizontalAlignment="Center">O</Label>
+        <Label Grid.Row="2" Grid.Column="16" HorizontalAlignment="Center">P</Label>
+        <Label Grid.Row="2" Grid.Column="17" HorizontalAlignment="Center">Q</Label>
+        <Label Grid.Row="2" Grid.Column="18" HorizontalAlignment="Center">R</Label>
+        <Label Grid.Row="2" Grid.Column="19" HorizontalAlignment="Center">S</Label>
+        <Canvas Grid.Row="2" Grid.ColumnSpan="21" Grid.RowSpan="20" Background="BlanchedAlmond" Margin="33,28,33,0"/>
+
+        <Button Grid.ColumnSpan="6" Grid.Row="22" Grid.Column="9" Click="MainMenu" Margin="0,5,33,28" Grid.RowSpan="2">Main Menu</Button>
+        
     </Grid>
 </Window>
