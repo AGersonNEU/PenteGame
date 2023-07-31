@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PenteGame"
         mc:Ignorable="d"
         Title="Board" Height="700" Width="700">
-    
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -112,10 +112,19 @@
         <Label Grid.Row="1" Grid.Column="16" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="31,28,0,1" Grid.RowSpan="2" Width="20">Q</Label>
         <Label Grid.Row="1" Grid.Column="17" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="32,28,0,1" Grid.RowSpan="2" Width="18">R</Label>
         <Label Grid.Row="1" Grid.Column="18" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="33,28,0,1" Grid.RowSpan="2" Width="17">S</Label>
+        
         <Canvas Grid.Row="2" Grid.ColumnSpan="20" Grid.RowSpan="20" Background="BlanchedAlmond" Margin="33,28,30,28"/>
         <Grid ShowGridLines="True" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="18" Grid.RowSpan="18">
+            <Border BorderBrush="Black" BorderThickness="2" Grid.Column="0" Grid.Row="0" Grid.RowSpan="20" Grid.ColumnSpan="20"></Border>
+            <Button Name="A19" Click="PlacePiece" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="25" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="2" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
             
-                <Grid.ColumnDefinitions>
+            <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -135,8 +144,10 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-            </Grid.ColumnDefinitions> 
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
+                <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -158,7 +169,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
         </Grid>
-        <Button Grid.ColumnSpan="6" Grid.Row="22" Grid.Column="9" Click="MainMenu" Margin="0,5,33,28" Grid.RowSpan="2">Main Menu</Button>
+        <Button Grid.ColumnSpan="6" Grid.Row="22" Grid.Column="8" Click="MainMenu" Margin="0,5,33,28" Grid.RowSpan="2">Main Menu</Button>
 
     </Grid>
 </Window>
