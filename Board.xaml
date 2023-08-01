@@ -116,6 +116,7 @@
         <Canvas Grid.Row="2" Grid.ColumnSpan="20" Grid.RowSpan="20" Background="BlanchedAlmond" Margin="33,28,30,28"/>
         <Grid ShowGridLines="True" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="18" Grid.RowSpan="18">
             <Border BorderBrush="Black" BorderThickness="2" Grid.Column="0" Grid.Row="0" Grid.RowSpan="20" Grid.ColumnSpan="20"></Border>
+            <!--A's-->
             <Button Name="A19" Click="PlacePiece" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="25" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="2" >
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -249,6 +250,9 @@
                     </Style>
                 </Button.Resources>
             </Button>
+            
+            <!--B's-->
+            
             <Button x:Name="B19" Click="PlacePiece" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -382,6 +386,9 @@
                     </Style>
                 </Button.Resources>
             </Button>
+            
+            <!--C's-->
+            
             <Button x:Name="C19" Click="PlacePiece" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -515,6 +522,9 @@
                     </Style>
                 </Button.Resources>
             </Button>
+            
+            <!--D's-->
+            
             <Button x:Name="D19" Click="PlacePiece" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -648,6 +658,761 @@
                     </Style>
                 </Button.Resources>
             </Button>
+            
+            <!--E's-->
+
+            <Button x:Name="E19" Click="PlacePiece" Grid.Row="0" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E18" Click="PlacePiece" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E17" Click="PlacePiece" Grid.Row="2" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E16" Click="PlacePiece" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E15" Click="PlacePiece" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E14" Click="PlacePiece" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E13" Click="PlacePiece" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E12" Click="PlacePiece" Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E11" Click="PlacePiece" Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E10" Click="PlacePiece" Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E9" Click="PlacePiece" Grid.Row="10" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E8" Click="PlacePiece" Grid.Row="11" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E7" Click="PlacePiece" Grid.Row="12" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E6" Click="PlacePiece" Grid.Row="13" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E5" Click="PlacePiece" Grid.Row="14" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E4" Click="PlacePiece" Grid.Row="15" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E3" Click="PlacePiece" Grid.Row="16" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E2" Click="PlacePiece" Grid.Row="17" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="E1" Click="PlacePiece" Grid.Row="18" Grid.Column="4" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            
+            <!--F's-->
+
+            <Button x:Name="F19" Click="PlacePiece" Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F18" Click="PlacePiece" Grid.Row="1" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F17" Click="PlacePiece" Grid.Row="2" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F16" Click="PlacePiece" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F15" Click="PlacePiece" Grid.Row="4" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F14" Click="PlacePiece" Grid.Row="5" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F13" Click="PlacePiece" Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F12" Click="PlacePiece" Grid.Row="7" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F11" Click="PlacePiece" Grid.Row="8" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F10" Click="PlacePiece" Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F9" Click="PlacePiece" Grid.Row="10" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F8" Click="PlacePiece" Grid.Row="11" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F7" Click="PlacePiece" Grid.Row="12" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F6" Click="PlacePiece" Grid.Row="13" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F5" Click="PlacePiece" Grid.Row="14" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F4" Click="PlacePiece" Grid.Row="15" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F3" Click="PlacePiece" Grid.Row="16" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F2" Click="PlacePiece" Grid.Row="17" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="F1" Click="PlacePiece" Grid.Row="18" Grid.Column="5" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            
+            <!--G's-->
+
+            <Button x:Name="G19" Click="PlacePiece" Grid.Row="0" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G18" Click="PlacePiece" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G17" Click="PlacePiece" Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G16" Click="PlacePiece" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G15" Click="PlacePiece" Grid.Row="4" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G14" Click="PlacePiece" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G13" Click="PlacePiece" Grid.Row="6" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G12" Click="PlacePiece" Grid.Row="7" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G11" Click="PlacePiece" Grid.Row="8" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G10" Click="PlacePiece" Grid.Row="9" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G9" Click="PlacePiece" Grid.Row="10" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G8" Click="PlacePiece" Grid.Row="11" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G7" Click="PlacePiece" Grid.Row="12" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G6" Click="PlacePiece" Grid.Row="13" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G5" Click="PlacePiece" Grid.Row="14" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G4" Click="PlacePiece" Grid.Row="15" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G3" Click="PlacePiece" Grid.Row="16" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G2" Click="PlacePiece" Grid.Row="17" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="G1" Click="PlacePiece" Grid.Row="18" Grid.Column="6" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <!--H's-->
+
+            <Button x:Name="H19" Click="PlacePiece" Grid.Row="0" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H18" Click="PlacePiece" Grid.Row="1" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H17" Click="PlacePiece" Grid.Row="2" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H16" Click="PlacePiece" Grid.Row="3" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H15" Click="PlacePiece" Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H14" Click="PlacePiece" Grid.Row="5" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H13" Click="PlacePiece" Grid.Row="6" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H12" Click="PlacePiece" Grid.Row="7" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H11" Click="PlacePiece" Grid.Row="8" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H10" Click="PlacePiece" Grid.Row="9" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H9" Click="PlacePiece" Grid.Row="10" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H8" Click="PlacePiece" Grid.Row="11" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H7" Click="PlacePiece" Grid.Row="12" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H6" Click="PlacePiece" Grid.Row="13" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H5" Click="PlacePiece" Grid.Row="14" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H4" Click="PlacePiece" Grid.Row="15" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H3" Click="PlacePiece" Grid.Row="16" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H2" Click="PlacePiece" Grid.Row="17" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="H1" Click="PlacePiece" Grid.Row="18" Grid.Column="7" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <!--I's-->
+
+            <Button x:Name="I19" Click="PlacePiece" Grid.Row="0" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I18" Click="PlacePiece" Grid.Row="1" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I17" Click="PlacePiece" Grid.Row="2" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I16" Click="PlacePiece" Grid.Row="3" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I15" Click="PlacePiece" Grid.Row="4" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I14" Click="PlacePiece" Grid.Row="5" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I13" Click="PlacePiece" Grid.Row="6" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I12" Click="PlacePiece" Grid.Row="7" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I11" Click="PlacePiece" Grid.Row="8" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I10" Click="PlacePiece" Grid.Row="9" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I9" Click="PlacePiece" Grid.Row="10" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I8" Click="PlacePiece" Grid.Row="11" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I7" Click="PlacePiece" Grid.Row="12" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I6" Click="PlacePiece" Grid.Row="13" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I5" Click="PlacePiece" Grid.Row="14" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I4" Click="PlacePiece" Grid.Row="15" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I3" Click="PlacePiece" Grid.Row="16" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I2" Click="PlacePiece" Grid.Row="17" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="I1" Click="PlacePiece" Grid.Row="18" Grid.Column="8" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            
+
+            <!--J's-->
+
+            <Button x:Name="J19" Click="PlacePiece" Grid.Row="0" Grid.Column="9" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="J18" Click="PlacePiece" Grid.Row="1" Grid.Column="9" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="J17" Click="PlacePiece" Grid.Row="2" Grid.Column="9" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="J16" Click="PlacePiece" Grid.Row="3" Grid.Column="9" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="J15" Click="PlacePiece" Grid.Row="4" Grid.Column="9" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="J14" Click="PlacePiece" Grid.Row="5" Grid.Column="9" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="J13" Click="PlacePiece" Grid.Row="6" Grid.Column="9" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="J12" Click="PlacePiece" Grid.Row="7" Grid.Column="9" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="J11" Click="PlacePiece" Grid.Row="8" Grid.Column="9" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="J10" Click="PlacePiece" Grid.Row="9" Grid.Column="9" Grid.ColumnSpan="2" Width="24" Height="25" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.RowSpan="2" Margin="0,12,0,0" >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="12"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
