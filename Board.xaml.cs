@@ -19,10 +19,9 @@ namespace PenteGame
     /// </summary>
     public partial class Board : Window
     {
-        public static String playerTurn = GlobalVariables.playerOne.Name;
+        public static string playerTurn = GlobalVariables.playerOne.Name;
 
-        
-        
+
         public Board()
         {
             InitializeComponent();
@@ -1521,24 +1520,27 @@ namespace PenteGame
 
         private void PlacePiece(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
+            lblPlayerTurn.Content = playerTurn.ToString() + "'s Turn! ";
+            Button button = (Button)sender;
             button.Opacity = 100;
-            if (playerTurn == GlobalVariables.playerOne.Name)
+
+            if (playerTurn.Equals(GlobalVariables.playerOne.Name))
             {
                 //make the image on the button clicked white
                 
-                button.Background = Brushes.Black;
-                playerTurn = GlobalVariables.playerOne.Name;
+                button.Background = new SolidColorBrush(Colors.Blue);
+                playerTurn = GlobalVariables.playerTwo.Name;
 
-            }else if (playerTurn == GlobalVariables.playerTwo.Name)
+            }else if (playerTurn.Equals(GlobalVariables.playerTwo.Name))
             {
                 //make the image on the button clicked black
-               button.Background = Brushes.White;
+               button.Background = new SolidColorBrush(Colors.White);
                 playerTurn = GlobalVariables.playerOne.Name;
             }
 
             //making the image seen for the button but they can't click on this button again
             
+         
             button.IsEnabled = false;
             
             //save method to something
@@ -1547,8 +1549,18 @@ namespace PenteGame
 
         public bool IsMoveValid()
         {
-            //check direction for this button move
+            
+            //check for capture
+            //check for win, own method
+            
             return true;
+        }
+
+        public bool IsGameWon()
+        {
+            
+
+            return false;
         }
     }
 }
