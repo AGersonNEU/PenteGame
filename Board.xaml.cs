@@ -27,10 +27,12 @@ namespace PenteGame
             InitializeComponent();
             //J10 is center of Board
 
+            lblPlayerTurn.Content = playerTurn.ToString() + "'s Turn! ";
+
             //A's
 
             Button A19 = (Button)BoardOfButtons.FindName("A19");
-            A19.Opacity = 0;
+            //A19.Opacity = 0;
             A19.IsEnabled = true;
 
             Button A18 = (Button)BoardOfButtons.FindName("A18");
@@ -1521,27 +1523,31 @@ namespace PenteGame
         private void PlacePiece(object sender, RoutedEventArgs e)
         {
             lblPlayerTurn.Content = playerTurn.ToString() + "'s Turn! ";
-            Button button = (Button)sender;
+            Button button = sender as Button;
+            //button.IsEnabled = false;
+            button.IsHitTestVisible = false;
             button.Opacity = 100;
+            button.OverridesDefaultStyle = true;
 
-            if (playerTurn.Equals(GlobalVariables.playerOne.Name))
+
+            if (playerTurn == GlobalVariables.playerOne.Name)
             {
                 //make the image on the button clicked white
                 
-                button.Background = new SolidColorBrush(Colors.Blue);
+                button.Background = new SolidColorBrush(Colors.White);
                 playerTurn = GlobalVariables.playerTwo.Name;
 
-            }else if (playerTurn.Equals(GlobalVariables.playerTwo.Name))
+            }else if (playerTurn == GlobalVariables.playerTwo.Name)
             {
                 //make the image on the button clicked black
-               button.Background = new SolidColorBrush(Colors.White);
+                //button.Background = new SolidColorBrush(Colors.White);
+                button.Background = new SolidColorBrush(Colors.Black);
                 playerTurn = GlobalVariables.playerOne.Name;
             }
 
             //making the image seen for the button but they can't click on this button again
             
          
-            button.IsEnabled = false;
             
             //save method to something
             IsMoveValid();
