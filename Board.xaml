@@ -117,6 +117,7 @@
         <Grid Name="BoardOfButtons" ShowGridLines="True" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="18" Grid.RowSpan="18">
             <Border BorderBrush="Black" BorderThickness="2" Grid.Column="0" Grid.Row="0" Grid.RowSpan="20" Grid.ColumnSpan="20"></Border>
             <!--A's-->
+            
             <Button Name="A19" Click="PlacePiece" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Width="25" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.RowSpan="2" >
                 <Button.Resources>
                     <Style TargetType="Border">
