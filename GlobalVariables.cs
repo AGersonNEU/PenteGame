@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -11,6 +12,9 @@ namespace PenteGame
     {
         public static Player playerOne;
         public static Player playerTwo;
+
+        public static List<ArrayList> playerOneCaptures = new List<ArrayList>();
+        public static List<ArrayList> playerTwoCaptures = new List<ArrayList>();
         
     }
 }

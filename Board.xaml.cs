@@ -4,22 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Automation.Peers;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace PenteGame
 {
+
     /// <summary>
     /// Interaction logic for Board.xaml
     /// </summary>
     public partial class Board : Window
     {
+        public int left = 30;
+        public int speed = 5;
         public static string playerTurn = GlobalVariables.playerOne.Name;
+
+        //creates new timer
+        public DispatcherTimer timer = new DispatcherTimer();
+        //make a counter for captured pieces
+        //make list of int line count
 
 
         public Board()
@@ -27,12 +38,17 @@ namespace PenteGame
             InitializeComponent();
             //J10 is center of Board
 
+            //timer happens every 10 milli
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Start();
+            timer.Tick += Countdown;
+
             lblPlayerTurn.Content = playerTurn.ToString() + "'s Turn! ";
 
             //A's
 
             Button A19 = (Button)BoardOfButtons.FindName("A19");
-            //A19.Opacity = 0;
+            A19.Opacity = 0;
             A19.IsEnabled = true;
 
             Button A18 = (Button)BoardOfButtons.FindName("A18");
@@ -1512,6 +1528,25 @@ namespace PenteGame
             S1.IsEnabled = true;
         }
 
+        public void Countdown(object sender, EventArgs e)
+        {
+            if(lblTimer.Content.ToString() == "0")
+            {
+                if(playerTurn == GlobalVariables.playerOne.Name)
+                {
+                    playerTurn = GlobalVariables.playerTwo.Name;
+                }
+
+                else if(playerTurn == GlobalVariables.playerTwo.Name)
+                {
+                    playerTurn = GlobalVariables.playerOne.Name;
+                }
+                lblPlayerTurn.Content = playerTurn.ToString() + "'s Turn! ";
+                lblTimer.Content = "30";
+            }
+           lblTimer.Content = int.Parse(lblTimer.Content.ToString()) - 1;
+        }
+
         private void MainMenu(object sender, RoutedEventArgs e)
         {
             
@@ -1522,13 +1557,15 @@ namespace PenteGame
 
         private void PlacePiece(object sender, RoutedEventArgs e)
         {
-            lblPlayerTurn.Content = playerTurn.ToString() + "'s Turn! ";
+            //restarting 30 seconds
+            timer.Stop();
+            lblTimer.Content = 30;
+            timer.Start();
+
             Button button = sender as Button;
-            //button.IsEnabled = false;
             button.IsHitTestVisible = false;
             button.Opacity = 100;
             button.OverridesDefaultStyle = true;
-
 
             if (playerTurn == GlobalVariables.playerOne.Name)
             {
@@ -1536,37 +1573,214 @@ namespace PenteGame
                 
                 button.Background = new SolidColorBrush(Colors.White);
                 playerTurn = GlobalVariables.playerTwo.Name;
+                
 
-            }else if (playerTurn == GlobalVariables.playerTwo.Name)
+            }
+            else if (playerTurn == GlobalVariables.playerTwo.Name)
             {
                 //make the image on the button clicked black
                 //button.Background = new SolidColorBrush(Colors.White);
                 button.Background = new SolidColorBrush(Colors.Black);
                 playerTurn = GlobalVariables.playerOne.Name;
             }
+            lblPlayerTurn.Content = playerTurn.ToString() + "'s Turn! ";
+
 
             //making the image seen for the button but they can't click on this button again
-            
-         
-            
+
+            //reset turn timer
+
             //save method to something
-            IsMoveValid();
+            IsMoveValid(button);
+
+            //if (IsGameWon() == true)
+            //{
+            //    EndGame();
+            //}
         }
 
-        public bool IsMoveValid()
+        //return a list of buttons
+        public bool IsMoveValid(Button currentPiece)
         {
             
-            //check for capture
-            //check for win, own method
-            
+            //global list for number of pieces in a line (dictionary)
+
+            //format = "Letter""Numbers"
+            string buttonName = currentPiece.Name.ToString();
+            char buttonCharLetter = buttonName[0];
+            int buttonELetter = (int)buttonCharLetter + 1;
+            int buttonWLetter = (int)buttonCharLetter - 1;
+            int buttonSNumber = int.Parse(buttonName.Substring(1)) - 1;
+            int buttonNNumber = int.Parse(buttonName.Substring(1)) + 1;
+
+
+            //int buttonBottomNumber = int.Parse(buttonName.Substring(1)) - 1;
+            ////check neighboring piece////
+
+            //North
+            if (buttonNNumber < 20)
+            {
+
+                Button foundButtonNorth = (Button)BoardOfButtons.FindName(buttonName[0] + buttonNNumber.ToString());
+                //check current button color and top button color
+                if ((foundButtonNorth.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
+                {
+                    AddButtonToList(currentPiece.Name.ToString(), foundButtonNorth.Name.ToString());
+                }
+            }
+
+            //South
+            if(buttonSNumber > 0)
+            {
+                Button foundButtonSouth = (Button)BoardOfButtons.FindName(buttonName[0] + buttonSNumber.ToString());
+                //check current button color and top button color
+                if ((foundButtonSouth.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
+                {
+                    AddButtonToList(currentPiece.Name.ToString(), foundButtonSouth.Name.ToString());
+                }
+            }
+
+            //East
+            if (buttonELetter < 84)
+            {
+                Button foundButtonEast = (Button)BoardOfButtons.FindName(Convert.ToChar(buttonELetter).ToString() + buttonName.Substring(1));
+                //check current button color and right button color
+                if ((foundButtonEast.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
+                {
+                    AddButtonToList(currentPiece.Name.ToString(), foundButtonEast.Name.ToString());
+                }
+            }
+
+            //West
+            if(buttonWLetter > 64)
+            {
+                Button foundButtonWest = (Button)BoardOfButtons.FindName(Convert.ToChar(buttonWLetter).ToString() + buttonName.Substring(1));
+                //check current button color and left button color
+                if ((foundButtonWest.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
+                {
+                    AddButtonToList(currentPiece.Name.ToString(), foundButtonWest.Name.ToString());
+                }
+            }
+
+            //NorthWest
+            if (buttonWLetter > 64 && buttonNNumber < 20)
+            {
+                Button foundButtonNorthWest = (Button)BoardOfButtons.FindName(Convert.ToChar(buttonWLetter).ToString() + buttonNNumber.ToString());
+                if ((foundButtonNorthWest.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
+                {
+                    AddButtonToList(currentPiece.Name.ToString(), foundButtonNorthWest.Name.ToString());
+                }
+            }
+
+            //NorthEast
+            if (buttonNNumber < 20 && buttonELetter < 84)
+            {
+                Button foundButtonNorthEast = (Button)BoardOfButtons.FindName(Convert.ToChar(buttonELetter).ToString() + buttonNNumber.ToString());
+                if ((foundButtonNorthEast.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
+                {
+                    AddButtonToList(currentPiece.Name.ToString(), foundButtonNorthEast.Name.ToString());
+                }
+            }
+
+            //SouthWest
+            if (buttonWLetter > 64 && buttonSNumber > 0)
+            {
+                Button foundButtonSouthWest = (Button)BoardOfButtons.FindName(Convert.ToChar(buttonWLetter).ToString() + buttonSNumber.ToString());
+                if ((foundButtonSouthWest.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
+                {
+                    AddButtonToList(currentPiece.Name.ToString(), foundButtonSouthWest.Name.ToString());
+                }
+            }
+
+            //SouthEast
+            if (buttonSNumber > 0 && buttonELetter < 84)
+            {
+                Button foundButtonSouthEast = (Button)BoardOfButtons.FindName(Convert.ToChar(buttonELetter).ToString() + buttonSNumber.ToString());
+                if ((foundButtonSouthEast.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
+                {
+                    AddButtonToList(currentPiece.Name.ToString(), foundButtonSouthEast.Name.ToString());
+                }
+            }
+
+
             return true;
+        }
+
+        public void AddButtonToList(string currentButtonName, string prevButtonName)
+        {
+            //add to global list where the button above or below is in the list
+
+      
+            //if the global list contains one of the buttons thats on the board near current button 
+            //then add it to that arraylist in list
+            //else make a new arraylist and add the current button to that
+            if (GlobalVariables.playerTwoCaptures.Where(x => x.Contains
+            (prevButtonName)).FirstOrDefault() == null)
+            {
+                GlobalVariables.playerTwoCaptures.Add(new System.Collections.ArrayList() { currentButtonName });
+            }
+            else
+            {
+                GlobalVariables.playerTwoCaptures.Where(x => x.Contains
+                (prevButtonName)).FirstOrDefault().Add(currentButtonName);
+            }
         }
 
         public bool IsGameWon()
         {
-            
+            lblAlert.Content = string.Empty;
+            //if the count for captured == 10 then other player wins
+            foreach(System.Collections.ArrayList arrayList in GlobalVariables.playerTwoCaptures)
+            {
+                if(arrayList.Count == 3)
+                {
+                    lblAlert.Content = lblAlert.Content + " " + GlobalVariables.playerTwo.Name.ToString() + " has a Tria"; 
+                }
 
+                if(arrayList.Count == 4)
+                {
+                    lblAlert.Content = lblAlert.Content + " " + GlobalVariables.playerTwo.Name.ToString() + " has a Tessera";
+                    return false;
+                }
+
+                if(arrayList.Count >= 5)
+                {
+                   return true;
+                }
+            }
+
+            foreach(System.Collections.ArrayList arrayList in GlobalVariables.playerOneCaptures)
+            {
+                if (arrayList.Count == 3)
+                {
+                    lblAlert.Content = lblAlert.Content + " " + GlobalVariables.playerOne.Name.ToString() + " has a Tria";
+                }
+
+                if (arrayList.Count == 4)
+                {
+                    lblAlert.Content = lblAlert.Content + " " + GlobalVariables.playerOne.Name.ToString() + " has a Tessera";
+                    return false;
+                }
+
+                if (arrayList.Count >= 5)
+                {
+                    return true;
+                }
+            }
+
+      
             return false;
+        }
+
+        public void EndGame()
+        {
+            foreach(Button button in Resources.OfType<Button>())
+            {
+                if(button.Name.ToString().Trim() != "btnMainMenu")
+                {
+                    button.IsEnabled = false;
+                }
+            }
         }
     }
 }

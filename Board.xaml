@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PenteGame"
         mc:Ignorable="d"
-        Title="Board" Height="700" Width="700">
+        Title="Board" Height="800" Width="800">
 
     <!--<Window.Resources>
         <SolidColorBrush x:Key="CompanyColor" Color="Violet"/>
@@ -63,19 +63,19 @@
             <RowDefinition/>
 
         </Grid.RowDefinitions>
-        <Border Grid.Column="0" BorderBrush="White" BorderThickness="1">
-        </Border>
-        <Border Grid.Column="1" BorderBrush="White" BorderThickness="1">
-        </Border>
-        <Border Grid.Column="2" BorderBrush="White" BorderThickness="1">
-        </Border>
+
+        <Label HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="10" Grid.Row="0" Grid.Column="19">Timer</Label>
+        <Label Name="lblTimer" Grid.Row="1" Grid.Column="19" Content="30" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"></Label>
+        
+        <Label Name="lblAlert" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="4" Foreground="Red"></Label>
+        
         <Label Grid.Column="6" Grid.ColumnSpan="8" Grid.RowSpan="2" HorizontalContentAlignment="Center" Name="lblPlayerTurn" Content="It is Player One's Turn" Margin="27,25,27,9"/>
 
         <Image Source="./Resources/BlackPiece_lg.png" Height="23" Width="28" HorizontalAlignment="Center" Grid.Column="15" Margin="0,3,0,3"/>
-        <Label Grid.Column="15" Grid.Row="1" HorizontalContentAlignment="Center">x0</Label>
+        <Label Name="lblWhiteCapture" Grid.Column="15" Grid.Row="1" HorizontalContentAlignment="Center">x0</Label>
 
         <Image Source="./Resources/WhitePiece_lg.png" Height="23" Width="28" HorizontalAlignment="Center" Grid.Column="17" Margin="0,3,0,3"/>
-        <Label Grid.Column="17" Grid.Row="1" HorizontalContentAlignment="Center">x0</Label>
+        <Label Name="lblBlackCapture" Grid.Column="17" Grid.Row="1" HorizontalContentAlignment="Center">x0</Label>
 
         <Label Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="23" Height="27" Grid.RowSpan="2">19</Label>
         <Label Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" Grid.RowSpan="2" Margin="8,10,0,0">18</Label>
@@ -2745,7 +2745,7 @@
             </Grid.RowDefinitions>
             
         </Grid>
-        <Button Grid.ColumnSpan="6" Grid.Row="22" Grid.Column="8" Click="MainMenu" Margin="0,5,33,28" Grid.RowSpan="2">Main Menu</Button>
+        <Button Name="btnMainMenu" Grid.ColumnSpan="6" Grid.Row="22" Grid.Column="8" Click="MainMenu" Margin="0,5,33,28" Grid.RowSpan="2">Main Menu</Button>
 
     </Grid>
 </Window>
