@@ -1530,26 +1530,26 @@ namespace PenteGame
 
         public void Countdown(object sender, EventArgs e)
         {
-            if(lblTimer.Content.ToString() == "0")
+            if (lblTimer.Content.ToString() == "0")
             {
-                if(playerTurn == GlobalVariables.playerOne.Name)
+                if (playerTurn == GlobalVariables.playerOne.Name)
                 {
                     playerTurn = GlobalVariables.playerTwo.Name;
                 }
 
-                else if(playerTurn == GlobalVariables.playerTwo.Name)
+                else if (playerTurn == GlobalVariables.playerTwo.Name)
                 {
                     playerTurn = GlobalVariables.playerOne.Name;
                 }
                 lblPlayerTurn.Content = playerTurn.ToString() + "'s Turn! ";
                 lblTimer.Content = "30";
             }
-           lblTimer.Content = int.Parse(lblTimer.Content.ToString()) - 1;
+            lblTimer.Content = int.Parse(lblTimer.Content.ToString()) - 1;
         }
 
         private void MainMenu(object sender, RoutedEventArgs e)
         {
-            
+
             MainWindow menu = new MainWindow();
             this.Close();
             menu.Show();
@@ -1570,10 +1570,10 @@ namespace PenteGame
             if (playerTurn == GlobalVariables.playerOne.Name)
             {
                 //make the image on the button clicked white
-                
+
                 button.Background = new SolidColorBrush(Colors.White);
                 playerTurn = GlobalVariables.playerTwo.Name;
-                
+
 
             }
             else if (playerTurn == GlobalVariables.playerTwo.Name)
@@ -1600,18 +1600,23 @@ namespace PenteGame
         }
 
         //return a list of buttons
-        public bool IsMoveValid(Button currentPiece)
+        public void IsMoveValid(Button currentPiece)
         {
-            
+
             //global list for number of pieces in a line (dictionary)
 
             //format = "Letter""Numbers"
             string buttonName = currentPiece.Name.ToString();
             char buttonCharLetter = buttonName[0];
             int buttonELetter = (int)buttonCharLetter + 1;
+            int buttonECaptureLetter = (int)buttonCharLetter + 3;
             int buttonWLetter = (int)buttonCharLetter - 1;
+            int buttonWCaptureLetter = (int)buttonCharLetter - 3;
             int buttonSNumber = int.Parse(buttonName.Substring(1)) - 1;
+            int buttonSCaptureNumber = int.Parse(buttonName.Substring(1)) - 3;
             int buttonNNumber = int.Parse(buttonName.Substring(1)) + 1;
+            int buttonNCaptureNumber = int.Parse(buttonName.Substring(1)) + 3;
+
 
 
             //int buttonBottomNumber = int.Parse(buttonName.Substring(1)) - 1;
@@ -1622,21 +1627,55 @@ namespace PenteGame
             {
 
                 Button foundButtonNorth = (Button)BoardOfButtons.FindName(buttonName[0] + buttonNNumber.ToString());
+                Button foundCaptureButtonNorth = (Button)BoardOfButtons.FindName(buttonName[0] + buttonNCaptureNumber.ToString());
                 //check current button color and top button color
                 if ((foundButtonNorth.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
                 {
                     AddButtonToList(currentPiece.Name.ToString(), foundButtonNorth.Name.ToString());
                 }
+
+                if ((foundCaptureButtonNorth.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
+                {
+
+                    int buttonCapOne = int.Parse(buttonName.Substring(1)) + 1;
+                    int buttonCapTwo = int.Parse(buttonName.Substring(1)) + 2;
+
+                    Button buttonOne = (Button)BoardOfButtons.FindName(buttonName[0] + buttonCapOne.ToString());
+                    Button buttonTwo = (Button)BoardOfButtons.FindName(buttonName[0] + buttonCapTwo.ToString());
+
+
+                    buttonTwo.Opacity = 0;
+                    buttonTwo.Background = new SolidColorBrush(Colors.Blue);
+                    buttonOne.Opacity = 0;
+                    buttonOne.Background = new SolidColorBrush(Colors.Blue);
+                }
             }
 
             //South
-            if(buttonSNumber > 0)
+            if (buttonSNumber > 0)
             {
                 Button foundButtonSouth = (Button)BoardOfButtons.FindName(buttonName[0] + buttonSNumber.ToString());
+                Button foundCaptureButtonSouth = (Button)BoardOfButtons.FindName(buttonName[0] + buttonSCaptureNumber.ToString());
                 //check current button color and top button color
                 if ((foundButtonSouth.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
                 {
                     AddButtonToList(currentPiece.Name.ToString(), foundButtonSouth.Name.ToString());
+                }
+
+                if ((foundCaptureButtonSouth.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
+                {
+
+                    int buttonCapOne = int.Parse(buttonName.Substring(1)) - 1;
+                    int buttonCapTwo = int.Parse(buttonName.Substring(1)) - 2;
+
+                    Button buttonOne = (Button)BoardOfButtons.FindName(buttonName[0] + buttonCapOne.ToString());
+                    Button buttonTwo = (Button)BoardOfButtons.FindName(buttonName[0] + buttonCapTwo.ToString());
+
+
+                    buttonTwo.Opacity = 0;
+                    buttonTwo.Background = new SolidColorBrush(Colors.Blue);
+                    buttonOne.Opacity = 0;
+                    buttonOne.Background = new SolidColorBrush(Colors.Blue);
                 }
             }
 
@@ -1644,21 +1683,63 @@ namespace PenteGame
             if (buttonELetter < 84)
             {
                 Button foundButtonEast = (Button)BoardOfButtons.FindName(Convert.ToChar(buttonELetter).ToString() + buttonName.Substring(1));
+                Button foundCaptureButtonEast = (Button)BoardOfButtons.FindName(Convert.ToChar(buttonECaptureLetter).ToString() + buttonName.Substring(1));
                 //check current button color and right button color
                 if ((foundButtonEast.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
                 {
                     AddButtonToList(currentPiece.Name.ToString(), foundButtonEast.Name.ToString());
                 }
+
+                //CAPTURE
+                if ((foundCaptureButtonEast.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
+                {
+                    int buttonCapOne = (int)buttonCharLetter + 1;
+                    int buttonCapTwo = (int)buttonCharLetter + 2;
+                    string buttonCapOneName = Convert.ToChar(buttonCapOne).ToString() + buttonName.Substring(1);
+                    string buttonCapTwoName = Convert.ToChar(buttonCapTwo).ToString() + buttonName.Substring(1);
+
+
+                    Button buttonOne = (Button)BoardOfButtons.FindName(buttonCapOneName);
+                    Button buttonTwo = (Button)BoardOfButtons.FindName(buttonCapTwoName);
+
+
+                    buttonTwo.Opacity = 0;
+                    buttonTwo.Background = new SolidColorBrush(Colors.Blue);
+                    buttonOne.Opacity = 0;
+                    buttonOne.Background = new SolidColorBrush(Colors.Blue);
+                    //I would need to remove them from the set pieces 
+                }
             }
 
             //West
-            if(buttonWLetter > 64)
+            if (buttonWLetter > 64)
             {
                 Button foundButtonWest = (Button)BoardOfButtons.FindName(Convert.ToChar(buttonWLetter).ToString() + buttonName.Substring(1));
+                Button foundCaptureButtonWest = (Button)BoardOfButtons.FindName(Convert.ToChar(buttonWCaptureLetter).ToString() + buttonName.Substring(1));
                 //check current button color and left button color
                 if ((foundButtonWest.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
                 {
                     AddButtonToList(currentPiece.Name.ToString(), foundButtonWest.Name.ToString());
+                }
+
+                //CAPTURE
+                if ((foundCaptureButtonWest.Background as SolidColorBrush).Color == (currentPiece.Background as SolidColorBrush).Color)
+                {
+                    int buttonCapOne = (int)buttonCharLetter - 1;
+                    int buttonCapTwo = (int)buttonCharLetter - 2;
+                    string buttonCapOneName = Convert.ToChar(buttonCapOne).ToString() + buttonName.Substring(1);
+                    string buttonCapTwoName = Convert.ToChar(buttonCapTwo).ToString() + buttonName.Substring(1);
+
+
+                    Button buttonOne = (Button)BoardOfButtons.FindName(buttonCapOneName);
+                    Button buttonTwo = (Button)BoardOfButtons.FindName(buttonCapTwoName);
+
+
+                    buttonTwo.Opacity = 0;
+                    buttonTwo.Background = new SolidColorBrush(Colors.Blue);
+                    buttonOne.Opacity = 0;
+                    buttonOne.Background = new SolidColorBrush(Colors.Blue);
+                    //I would need to remove them from the set pieces 
                 }
             }
 
@@ -1670,6 +1751,8 @@ namespace PenteGame
                 {
                     AddButtonToList(currentPiece.Name.ToString(), foundButtonNorthWest.Name.ToString());
                 }
+
+                
             }
 
             //NorthEast
@@ -1703,14 +1786,10 @@ namespace PenteGame
             }
 
 
-            return true;
         }
 
         public void AddButtonToList(string currentButtonName, string prevButtonName)
         {
-            //add to global list where the button above or below is in the list
-
-      
             //if the global list contains one of the buttons thats on the board near current button 
             //then add it to that arraylist in list
             //else make a new arraylist and add the current button to that
@@ -1730,26 +1809,26 @@ namespace PenteGame
         {
             lblAlert.Content = string.Empty;
             //if the count for captured == 10 then other player wins
-            foreach(System.Collections.ArrayList arrayList in GlobalVariables.playerTwoCaptures)
+            foreach (System.Collections.ArrayList arrayList in GlobalVariables.playerTwoCaptures)
             {
-                if(arrayList.Count == 3)
+                if (arrayList.Count == 3)
                 {
-                    lblAlert.Content = lblAlert.Content + " " + GlobalVariables.playerTwo.Name.ToString() + " has a Tria"; 
+                    lblAlert.Content = lblAlert.Content + " " + GlobalVariables.playerTwo.Name.ToString() + " has a Tria";
                 }
 
-                if(arrayList.Count == 4)
+                if (arrayList.Count == 4)
                 {
                     lblAlert.Content = lblAlert.Content + " " + GlobalVariables.playerTwo.Name.ToString() + " has a Tessera";
                     return false;
                 }
 
-                if(arrayList.Count >= 5)
+                if (arrayList.Count >= 5)
                 {
-                   return true;
+                    return true;
                 }
             }
 
-            foreach(System.Collections.ArrayList arrayList in GlobalVariables.playerOneCaptures)
+            foreach (System.Collections.ArrayList arrayList in GlobalVariables.playerOneCaptures)
             {
                 if (arrayList.Count == 3)
                 {
@@ -1768,15 +1847,15 @@ namespace PenteGame
                 }
             }
 
-      
+
             return false;
         }
 
         public void EndGame()
         {
-            foreach(Button button in Resources.OfType<Button>())
+            foreach (Button button in Resources.OfType<Button>())
             {
-                if(button.Name.ToString().Trim() != "btnMainMenu")
+                if (button.Name.ToString().Trim() != "btnMainMenu")
                 {
                     button.IsEnabled = false;
                 }
